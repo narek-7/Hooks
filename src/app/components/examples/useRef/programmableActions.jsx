@@ -30,7 +30,7 @@ const ProgrammableActionsExample = () => {
                 Focus input
             </button>
             <button className="btn btn-primary m-2" onClick={handleClickWidth}>
-                Change length
+                Change width
             </button>
         </CardWrapper>
     );
