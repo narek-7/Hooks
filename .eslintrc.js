@@ -20,7 +20,8 @@ module.exports = {
             "error",
             { anonymous: "always", named: "never" }
         ],
-        "multiline-ternary": ["off"],
+        "multiline-ternary": ["off"], // для ?:
+        "react/display-name": "off", // для замыкания
         quotes: [
             "error",
             "double",
