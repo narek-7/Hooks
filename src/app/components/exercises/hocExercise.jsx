@@ -1,7 +1,10 @@
 import React from "react";
 import CollapseWrapper from "../common/collapse";
+import withCardStyleAuth from "../examples/hoc/withCardStyleAuth";
+import SimpleComponent from "../examples/hoc/simpleComponent";
 
 const HocExercise = () => {
+    const ComponentWithCardStyleAuth = withCardStyleAuth(SimpleComponent);
     return (
         <CollapseWrapper title="Упражнение">
             <p className="mt-3">
@@ -47,6 +50,7 @@ const HocExercise = () => {
                     <code>user</code> в <code>localStorage</code>
                 </li>
             </ul>
+            <ComponentWithCardStyleAuth />
         </CollapseWrapper>
     );
 };

@@ -32,7 +32,6 @@ const UseRefExercise = () => {
             <button
                 className="btn btn-primary mt-3"
                 onClick={handleClick}
-                style={{ display: "inline-block" }}
             >
                 Change Block
             </button>
