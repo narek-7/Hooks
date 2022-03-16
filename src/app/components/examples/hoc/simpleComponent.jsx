@@ -2,10 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const SimpleComponent = ({ onLogin, onLogOut, isAuth }) => {
-    const isLogin = isAuth;
     return (
         <div>
-            {isLogin ? (
+            {isAuth ? (
                 <button
                     className="btn btn-danger mt-3"
                     onClick={onLogOut}
