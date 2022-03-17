@@ -1,20 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import CollapseWrapper from "../common/collapse";
 import withCardStyleAuth from "../examples/hoc/withCardStyleAuth";
+import withUserLogin from "../examples/hoc/withUserLogin";
 import SimpleComponent from "../examples/hoc/simpleComponent";
 
 const HocExercise = () => {
-    const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
-
-    const onLogin = () => {
-        localStorage.setItem("isAuth", "true");
-        setIsAuth(localStorage.getItem("isAuth"));
-    };
-    const onLogOut = () => {
-        localStorage.setItem("isAuth", "");
-        setIsAuth(localStorage.getItem("isAuth"));
-    };
-    const ComponentWithCardStyleAuth = withCardStyleAuth(SimpleComponent);
+    const ComponentWithUserLogin = withUserLogin(SimpleComponent);
+    const CompletedComponent = withCardStyleAuth(ComponentWithUserLogin);
 
     return (
         <>
@@ -63,13 +55,10 @@ const HocExercise = () => {
                     </li>
                 </ul>
             </CollapseWrapper>
-            <ComponentWithCardStyleAuth
-                isAuth={isAuth}
-                onLogin={onLogin}
-                onLogOut={onLogOut}
-            />
+            <CompletedComponent />
         </>
     );
 };
 
 export default HocExercise;
+   

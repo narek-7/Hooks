@@ -8,5 +8,4 @@ const withPropsStyles = (Component) => (props) => {
         </CardWrapper>
     );
 };
-
 export default withPropsStyles;
